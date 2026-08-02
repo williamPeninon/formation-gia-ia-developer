@@ -1,0 +1,9 @@
+{
+  "name": "tp2-generateur-pages-web",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "TP2 - Genere une page HTML a partir d'un prompt envoye a un LLM",
+  "scripts": {
+    "start": "node generer-page.js"
+  }
+}
