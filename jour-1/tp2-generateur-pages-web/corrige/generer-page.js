@@ -1,5 +1,5 @@
 // TP2 - Générateur de pages web par prompt (corrigé)
-// Usage : OPENAI_API_KEY=sk-... node generer-page.js "un prompt"
+// Usage : node --env-file=.env generer-page.js "un prompt"
 
 import fs from "node:fs";
 
@@ -36,7 +36,12 @@ async function genererPage() {
   }
 
   const data = await reponse.json();
-  const html = data.choices[0].message.content;
+  // Malgré le system prompt, le modèle entoure parfois sa réponse de
+  // balises Markdown (```html ... ```) : on les retire avant d'écrire le fichier.
+  const html = data.choices[0].message.content
+    .trim()
+    .replace(/^```(?:html)?\s*/i, "")
+    .replace(/\s*```$/, "");
   fs.writeFileSync("page-generee.html", html);
   console.log("Page générée : page-generee.html");
 }

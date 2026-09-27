@@ -4,7 +4,7 @@
 // et écrire le HTML retourné dans page-generee.html.
 //
 // Usage prévu :
-//   OPENAI_API_KEY=sk-... node generer-page.js "un prompt de page web"
+//   node --env-file=.env generer-page.js "un prompt de page web"
 
 import fs from "node:fs";
 

@@ -10,11 +10,13 @@
 ## Utilisation prévue
 
 ```bash
-npm install
-cp .env.example .env   # puis renseigner votre clé API
-export $(cat .env | xargs)
-node generer-page.js "une page d'accueil pour un club de course à pied"
+cp .env.example .env   # puis renseigner votre clé API dans .env
+node --env-file=.env generer-page.js "une page d'accueil pour un club de course à pied"
 ```
+
+> `--env-file` (Node.js 20.6+) charge les variables du fichier `.env` sans
+> les exporter dans votre terminal. Alternative sans fichier :
+> `OPENAI_API_KEY=sk-... node generer-page.js "votre prompt"`
 
 ## Point de vigilance sécurité
 
