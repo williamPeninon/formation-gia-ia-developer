@@ -1,9 +1,0 @@
-{
-  "name": "tp6-rag-local-lmstudio",
-  "version": "1.0.0",
-  "type": "module",
-  "description": "TP6 - ChatGPT local sur base documentaire confidentielle (RAG + LM Studio)",
-  "scripts": {
-    "start": "node rag-local.js"
-  }
-}

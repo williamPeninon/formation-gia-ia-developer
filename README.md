@@ -16,8 +16,8 @@ de trois natures différentes :
 
 | Type | TP concernés | Contenu du dossier |
 |---|---|---|
-| Code à compléter | TP1, TP2, TP6 | `depart/` (squelette + `TODO`) et `corrige/` (solution fonctionnelle) |
-| Rédaction de prompt / spécification | TP3, TP5 | `depart/` (gabarit Markdown à remplir) et `corrige/` (exemple rédigé) |
+| Code à compléter | TP1, TP2, TP6 | `depart/` (squelette + `TODO`) ; solution fonctionnelle publiée après correction |
+| Rédaction de prompt / spécification | TP3, TP5 | `depart/` (gabarit Markdown à remplir) ; exemple rédigé publié après correction |
 | Outil IA externe (Bolt, Lovable, Copilot agent) | TP4 | `sujet.md` uniquement — pas de code, l'exercice se fait entièrement dans l'outil choisi |
 
 ## Comment utiliser ce dépôt
@@ -25,7 +25,15 @@ de trois natures différentes :
 1. Ouvrez le dossier du TP du jour dans votre éditeur de code (VS Code recommandé)
 2. Pour les TP de code : complétez le fichier indiqué aux endroits marqués `// TODO`
 3. Pour les TP de prompt/spécification : complétez le fichier Markdown fourni
-4. Comparez votre résultat avec le dossier `corrige/` après la correction ou le débriefing collectif
+4. Après la correction ou le débriefing collectif, récupérez les corrigés
+   (branche `corriges`, rendue disponible par le formateur) et comparez :
+
+   ```bash
+   git fetch origin
+   git checkout corriges
+   ```
+
+   Chaque TP contient alors un dossier `corrige/` à côté de `depart/`.
 
 ## Prérequis techniques
 
